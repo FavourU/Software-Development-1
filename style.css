@@ -124,6 +124,25 @@ body {
     0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
+.next-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background: var(--accent-dark);
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.next-button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
 
 /* ----------------------------------------------------------
    RESPONSIVE ADJUSTMENTS
