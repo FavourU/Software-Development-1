@@ -1,6 +1,15 @@
+/* ----------------------------------------------------------
+   GLOBAL UTILITIES
+---------------------------------------------------------- */
+
 .hidden {
   display: none;
 }
+
+
+/* ----------------------------------------------------------
+   THEME VARIABLES
+---------------------------------------------------------- */
 
 :root {
   --bg: #2b0b1a;
@@ -10,6 +19,11 @@
   --text-main: #ffffff;
   --text-muted: #f7cfe0;
 }
+
+
+/* ----------------------------------------------------------
+   GLOBAL RESET & BASE STYLES
+---------------------------------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -26,6 +40,11 @@ body {
   justify-content: center;
   padding: 1.5rem;
 }
+
+
+/* ----------------------------------------------------------
+   WELCOME SCREEN STYLES
+---------------------------------------------------------- */
 
 .container {
   max-width: 700px;
@@ -58,6 +77,11 @@ body {
   color: var(--text-muted);
   margin-bottom: 2.5rem;
 }
+
+
+/* ----------------------------------------------------------
+   BUTTONS
+---------------------------------------------------------- */
 
 .cta-button {
   display: inline-block;
@@ -100,6 +124,11 @@ body {
     0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
+
+/* ----------------------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+---------------------------------------------------------- */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
@@ -124,9 +153,12 @@ body {
 }
 
 
-/* QUESTION SCREEN LAYOUT */
+/* ----------------------------------------------------------
+   QUESTION SCREEN LAYOUT
+---------------------------------------------------------- */
+
 .question-screen {
-  background: var(--bg); /* same burgundy background */
+  background: var(--bg);
   min-height: 100vh;
   padding: 2rem;
   display: flex;
@@ -134,7 +166,11 @@ body {
   align-items: center;
 }
 
-/* TOP BAR */
+
+/* ----------------------------------------------------------
+   QUESTION TOP BAR
+---------------------------------------------------------- */
+
 .question-header {
   width: 100%;
   display: flex;
@@ -146,10 +182,14 @@ body {
 }
 
 .timer {
-  color: var(--accent-light);
+  color: var(--accent-dark);
 }
 
-/* QUESTION CARD */
+
+/* ----------------------------------------------------------
+   QUESTION CARD
+---------------------------------------------------------- */
+
 .question-card {
   background: white;
   width: 90%;
@@ -161,13 +201,17 @@ body {
 }
 
 .question-text {
-  color: var(--text-dark);
+  color: #2b0b1a;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
-/* ANSWER BUTTONS */
+
+/* ----------------------------------------------------------
+   ANSWER BUTTONS
+---------------------------------------------------------- */
+
 .answer-option {
   width: 100%;
   padding: 1rem;
@@ -183,6 +227,6 @@ body {
 }
 
 .answer-option:hover {
-  background: var(--accent-light);
+  background: var(--accent-dark);
   transform: translateY(-2px);
 }
