@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 /* QUESTION SCREEN LAYOUT */
 .question-screen {
   background: var(--bg); /* same burgundy background */
