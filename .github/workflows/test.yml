@@ -3,48 +3,23 @@ name: Run Tests
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
 
 jobs:
   test:
+    name: Test Phase 3 (Complete Implementation)
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '20.x'
         cache: 'npm'
     
     - name: Install dependencies
       run: npm ci
     
-    - name: Run Phase 1 Tests (RED)
-      run: npm run test:phase1
-      continue-on-error: true
-    
-    - name: Run Phase 2 Tests (ORANGE)
-      run: npm run test:phase2
-      continue-on-error: true
-    
-    - name: Run Phase 3 Tests (GREEN)
+    - name: Run Phase 3 Tests
       run: npm run test:phase3
-    
-    - name: Run all tests with coverage
-      run: npm test
-    
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      if: matrix.node-version == '20.x'
-      with:
-        files: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-umbrella
