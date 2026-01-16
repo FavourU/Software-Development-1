@@ -3,7 +3,6 @@
  */
 
 const { describe, expect, test, beforeEach } = require('@jest/globals');
-
 // Import Phase 1 implementation (stubs only)
 const {
   QuizTimer,
@@ -59,6 +58,7 @@ describe('Timer Function - Phase 1', () => {
   });
 
   test('should stop timer when stop() is called', (done) => {
+    const QuizTimer = require('../js/quiz.js').QuizTimer;
     const timer = new QuizTimer(25);
     timer.start();
     
