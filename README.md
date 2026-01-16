@@ -1,3 +1,7 @@
+# Quiz Application with TDD
+
+![Tests](https://github.com/FavourU/Software-Development-1/actions/workflows/test.yml/badge.svg)
+
 # I Know, You Know, We Know - Trivia Quiz
 
 [Brief description]
