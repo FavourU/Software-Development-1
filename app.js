@@ -11,6 +11,7 @@
 let currentQuestion = 1;
 let quizTimer = null;
 let scoreTracker = null;
+let timerDisplayInterval = null; // Store the display interval reference
 
 // Define correct answers for each question
 const correctAnswers = {
@@ -77,6 +78,12 @@ function goToQuestion(questionNumber) {
     quizTimer.stop();
   }
   
+  // Clear display interval
+  if (timerDisplayInterval) {
+    clearInterval(timerDisplayInterval);
+    timerDisplayInterval = null;
+  }
+  
   // Update current question number
   currentQuestion = questionNumber;
   
@@ -100,6 +107,12 @@ function goToResults() {
   // Stop timer
   if (quizTimer) {
     quizTimer.stop();
+  }
+  
+  // Clear display interval
+  if (timerDisplayInterval) {
+    clearInterval(timerDisplayInterval);
+    timerDisplayInterval = null;
   }
   
   // Hide all screens
@@ -128,6 +141,12 @@ function resetQuiz() {
   // Stop timer if running
   if (quizTimer) {
     quizTimer.stop();
+  }
+  
+  // Clear display interval
+  if (timerDisplayInterval) {
+    clearInterval(timerDisplayInterval);
+    timerDisplayInterval = null;
   }
   
   // Hide all screens
@@ -161,6 +180,12 @@ function hideAllScreens() {
  * Start timer for the current question
  */
 function startTimerForCurrentQuestion() {
+  // Clear any existing display interval
+  if (timerDisplayInterval) {
+    clearInterval(timerDisplayInterval);
+    timerDisplayInterval = null;
+  }
+  
   // Create new timer (25 seconds)
   quizTimer = new QuizTimer(25, handleTimeOut);
   
@@ -168,11 +193,12 @@ function startTimerForCurrentQuestion() {
   quizTimer.start();
   
   // Update display every second
-  const timerDisplayInterval = setInterval(() => {
+  timerDisplayInterval = setInterval(() => {
     if (quizTimer && quizTimer.getTimeRemaining() > 0) {
       updateTimerDisplay();
     } else {
       clearInterval(timerDisplayInterval);
+      timerDisplayInterval = null;
     }
   }, 1000);
   
@@ -261,6 +287,12 @@ function handleAnswerClick(questionNum, buttonElement) {
   // Stop timer
   if (quizTimer) {
     quizTimer.stop();
+  }
+  
+  // Clear display interval
+  if (timerDisplayInterval) {
+    clearInterval(timerDisplayInterval);
+    timerDisplayInterval = null;
   }
   
   // Mark answer and update score
