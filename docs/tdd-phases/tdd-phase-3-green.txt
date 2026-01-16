@@ -1,0 +1,32 @@
+
+> trivia-quiz@1.0.0 test:phase3
+> jest tests/quiz-phase3.test.js
+
+PASS tests/quiz-phase3.test.js
+  Timer Function - Phase 1
+    ✓ should initialize timer with 25 seconds (11 ms)
+    ✓ should decrement timer every second (1105 ms)
+    ✓ should call callback when timer reaches zero (1504 ms)
+    ✓ should stop timer when stop() is called (1603 ms)
+    ✓ should reset timer to initial value (2 ms)
+  Answer Validation - Phase 1
+    ✓ should return true for correct answer (1 ms)
+    ✓ should return false for incorrect answer (2 ms)
+    ✓ should be case-insensitive (2 ms)
+    ✓ should handle whitespace (1 ms)
+    ✓ should mark answer as correct in UI (8 ms)
+    ✓ should mark answer as incorrect in UI (3 ms)
+  Score Calculation - Phase 1
+    ✓ should initialize score at zero (1 ms)
+    ✓ should increment score for correct answer (1 ms)
+    ✓ should not increment score for incorrect answer (1 ms)
+    ✓ should track total questions attempted (1 ms)
+    ✓ should calculate percentage score (1 ms)
+    ✓ should reset score to zero (1 ms)
+    ✓ should update score display in DOM (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       18 passed, 18 total
+Snapshots:   0 total
+Time:        4.87 s
+Ran all test suites matching /tests\/quiz-phase3.test.js/i.

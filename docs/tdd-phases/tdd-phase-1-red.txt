@@ -1,0 +1,421 @@
+
+> trivia-quiz@1.0.0 test:phase1
+> jest tests/quiz-phase1.test.js
+
+  console.error
+    Error: Uncaught [Error: expect(received).toBe(expected) // Object.is equality
+    
+    Expected: 2
+    Received: undefined]
+        at reportException (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+        at Timeout.task [as _onTimeout] (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/browser/Window.js:525:9)
+        at listOnTimeout (node:internal/timers:605:17)
+        at processTimers (node:internal/timers:541:7) {
+      detail: JestAssertionError: expect(received).toBe(expected) // Object.is equality
+      
+      Expected: 2
+      Received: undefined
+          at toBe (/workspaces/Software-Development-1/tests/quiz-phase1.test.js:44:40)
+          at Timeout.task [as _onTimeout] (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+          at listOnTimeout (node:internal/timers:605:17)
+          at processTimers (node:internal/timers:541:7) {
+        matcherResult: {
+          actual: undefined,
+          expected: 2,
+          message: 'expect(received).toBe(expected) // Object.is equality\n' +
+            '\n' +
+            'Expected: 2\n' +
+            'Received: undefined',
+          name: 'toBe',
+          pass: false
+        }
+      },
+      type: 'unhandled exception'
+    }
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:525:9)
+
+  console.error
+    Error: Uncaught [Error: expect(jest.fn()).toHaveBeenCalled()
+    
+    Expected number of calls: >= 1
+    Received number of calls:    0]
+        at reportException (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+        at Timeout.task [as _onTimeout] (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/browser/Window.js:525:9)
+        at listOnTimeout (node:internal/timers:605:17)
+        at processTimers (node:internal/timers:541:7) {
+      detail: JestAssertionError: expect(jest.fn()).toHaveBeenCalled()
+      
+      Expected number of calls: >= 1
+      Received number of calls:    0
+          at toHaveBeenCalled (/workspaces/Software-Development-1/tests/quiz-phase1.test.js:56:28)
+          at Timeout.task [as _onTimeout] (/workspaces/Software-Development-1/node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+          at listOnTimeout (node:internal/timers:605:17)
+          at processTimers (node:internal/timers:541:7) {
+        matcherResult: {
+          message: 'expect(jest.fn()).toHaveBeenCalled()\n' +
+            '\n' +
+            'Expected number of calls: >= 1\n' +
+            'Received number of calls:    0',
+          pass: false
+        }
+      },
+      type: 'unhandled exception'
+    }
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:525:9)
+
+FAIL tests/quiz-phase1.test.js (11.838 s)
+  Timer Function - Phase 1
+    ✕ should initialize timer with 25 seconds (12 ms)
+    ✕ should decrement timer every second (5004 ms)
+    ✕ should call callback when timer reaches zero (5003 ms)
+    ✓ should stop timer when stop() is called (1605 ms)
+    ✕ should reset timer to initial value (2 ms)
+  Answer Validation - Phase 1
+    ✕ should return true for correct answer (2 ms)
+    ✕ should return false for incorrect answer (2 ms)
+    ✕ should be case-insensitive (3 ms)
+    ✕ should handle whitespace (2 ms)
+    ✕ should mark answer as correct in UI (8 ms)
+    ✕ should mark answer as incorrect in UI (3 ms)
+  Score Calculation - Phase 1
+    ✕ should initialize score at zero (3 ms)
+    ✕ should increment score for correct answer (1 ms)
+    ✕ should not increment score for incorrect answer (2 ms)
+    ✕ should track total questions attempted (1 ms)
+    ✕ should calculate percentage score (1 ms)
+    ✕ should reset score to zero (1 ms)
+    ✕ should update score display in DOM (3 ms)
+
+  ● Timer Function - Phase 1 › should initialize timer with 25 seconds
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: undefined
+
+      34 |   test('should initialize timer with 25 seconds', () => {
+      35 |     const timer = new QuizTimer(25);
+    > 36 |     expect(timer.getTimeRemaining()).toBe(25);
+         |                                      ^
+      37 |   });
+      38 |
+      39 |   test('should decrement timer every second', (done) => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:36:38)
+
+  ● Timer Function - Phase 1 › should decrement timer every second
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      42 |     
+      43 |     setTimeout(() => {
+    > 44 |       expect(timer.getTimeRemaining()).toBe(2);
+         |                                        ^
+      45 |       timer.stop();
+      46 |       done();
+      47 |     }, 1100);
+
+      at toBe (tests/quiz-phase1.test.js:44:40)
+      at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+  ● Timer Function - Phase 1 › should decrement timer every second
+
+    thrown: "Exceeded timeout of 5000 ms for a test while waiting for `done()` to be called.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      37 |   });
+      38 |
+    > 39 |   test('should decrement timer every second', (done) => {
+         |   ^
+      40 |     const timer = new QuizTimer(3);
+      41 |     timer.start();
+      42 |     
+
+      at test (tests/quiz-phase1.test.js:39:3)
+      at Object.describe (tests/quiz-phase1.test.js:33:1)
+
+  ● Timer Function - Phase 1 › should call callback when timer reaches zero
+
+    expect(jest.fn()).toHaveBeenCalled()
+
+    Expected number of calls: >= 1
+    Received number of calls:    0
+
+      54 |     
+      55 |     setTimeout(() => {
+    > 56 |       expect(mockCallback).toHaveBeenCalled();
+         |                            ^
+      57 |       done();
+      58 |     }, 1500);
+      59 |   });
+
+      at toHaveBeenCalled (tests/quiz-phase1.test.js:56:28)
+      at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+  ● Timer Function - Phase 1 › should call callback when timer reaches zero
+
+    thrown: "Exceeded timeout of 5000 ms for a test while waiting for `done()` to be called.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      48 |   });
+      49 |
+    > 50 |   test('should call callback when timer reaches zero', (done) => {
+         |   ^
+      51 |     const mockCallback = jest.fn();
+      52 |     const timer = new QuizTimer(1, mockCallback);
+      53 |     timer.start();
+
+      at test (tests/quiz-phase1.test.js:50:3)
+      at Object.describe (tests/quiz-phase1.test.js:33:1)
+
+  ● Timer Function - Phase 1 › should reset timer to initial value
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: undefined
+
+      78 |     timer.start();
+      79 |     timer.reset();
+    > 80 |     expect(timer.getTimeRemaining()).toBe(25);
+         |                                      ^
+      81 |   });
+      82 | });
+      83 |
+
+      at Object.toBe (tests/quiz-phase1.test.js:80:38)
+
+  ● Answer Validation - Phase 1 › should return true for correct answer
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      89 |   test('should return true for correct answer', () => {
+      90 |     const result = validateAnswer('a) February', 'a) February');
+    > 91 |     expect(result).toBe(true);
+         |                    ^
+      92 |   });
+      93 |
+      94 |   test('should return false for incorrect answer', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:91:20)
+
+  ● Answer Validation - Phase 1 › should return false for incorrect answer
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      94 |   test('should return false for incorrect answer', () => {
+      95 |     const result = validateAnswer('b) March', 'a) February');
+    > 96 |     expect(result).toBe(false);
+         |                    ^
+      97 |   });
+      98 |
+      99 |   test('should be case-insensitive', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:96:20)
+
+  ● Answer Validation - Phase 1 › should be case-insensitive
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+       99 |   test('should be case-insensitive', () => {
+      100 |     const result = validateAnswer('A) FEBRUARY', 'a) February');
+    > 101 |     expect(result).toBe(true);
+          |                    ^
+      102 |   });
+      103 |
+      104 |   test('should handle whitespace', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:101:20)
+
+  ● Answer Validation - Phase 1 › should handle whitespace
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      104 |   test('should handle whitespace', () => {
+      105 |     const result = validateAnswer('  a) February  ', 'a) February');
+    > 106 |     expect(result).toBe(true);
+          |                    ^
+      107 |   });
+      108 |
+      109 |   test('should mark answer as correct in UI', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:106:20)
+
+  ● Answer Validation - Phase 1 › should mark answer as correct in UI
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "rgb(40, 167, 69)"
+    Received: ""
+
+      110 |     const button = document.querySelector('.answer-option[data-correct="true"]');
+      111 |     markAnswerCorrect(button);
+    > 112 |     expect(button.style.backgroundColor).toBe('rgb(40, 167, 69)');
+          |                                          ^
+      113 |     expect(button.disabled).toBe(true);
+      114 |   });
+      115 |
+
+      at Object.toBe (tests/quiz-phase1.test.js:112:42)
+
+  ● Answer Validation - Phase 1 › should mark answer as incorrect in UI
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "rgb(220, 53, 69)"
+    Received: ""
+
+      117 |     const button = document.querySelector('.answer-option[data-correct="false"]');
+      118 |     markAnswerIncorrect(button);
+    > 119 |     expect(button.style.backgroundColor).toBe('rgb(220, 53, 69)');
+          |                                          ^
+      120 |     expect(button.disabled).toBe(true);
+      121 |   });
+      122 | });
+
+      at Object.toBe (tests/quiz-phase1.test.js:119:42)
+
+  ● Score Calculation - Phase 1 › should initialize score at zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      129 |   test('should initialize score at zero', () => {
+      130 |     const tracker = new ScoreTracker();
+    > 131 |     expect(tracker.getScore()).toBe(0);
+          |                                ^
+      132 |   });
+      133 |
+      134 |   test('should increment score for correct answer', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:131:32)
+
+  ● Score Calculation - Phase 1 › should increment score for correct answer
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      135 |     const tracker = new ScoreTracker();
+      136 |     tracker.addCorrectAnswer();
+    > 137 |     expect(tracker.getScore()).toBe(1);
+          |                                ^
+      138 |   });
+      139 |
+      140 |   test('should not increment score for incorrect answer', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:137:32)
+
+  ● Score Calculation - Phase 1 › should not increment score for incorrect answer
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      141 |     const tracker = new ScoreTracker();
+      142 |     tracker.addIncorrectAnswer();
+    > 143 |     expect(tracker.getScore()).toBe(0);
+          |                                ^
+      144 |   });
+      145 |
+      146 |   test('should track total questions attempted', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:143:32)
+
+  ● Score Calculation - Phase 1 › should track total questions attempted
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      148 |     tracker.addCorrectAnswer();
+      149 |     tracker.addIncorrectAnswer();
+    > 150 |     expect(tracker.getTotalQuestions()).toBe(2);
+          |                                         ^
+      151 |   });
+      152 |
+      153 |   test('should calculate percentage score', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:150:41)
+
+  ● Score Calculation - Phase 1 › should calculate percentage score
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 66.67
+    Received: undefined
+
+      156 |     tracker.addCorrectAnswer();
+      157 |     tracker.addIncorrectAnswer();
+    > 158 |     expect(tracker.getPercentage()).toBe(66.67);
+          |                                     ^
+      159 |   });
+      160 |
+      161 |   test('should reset score to zero', () => {
+
+      at Object.toBe (tests/quiz-phase1.test.js:158:37)
+
+  ● Score Calculation - Phase 1 › should reset score to zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      163 |     tracker.addCorrectAnswer();
+      164 |     tracker.reset();
+    > 165 |     expect(tracker.getScore()).toBe(0);
+          |                                ^
+      166 |     expect(tracker.getTotalQuestions()).toBe(0);
+      167 |   });
+      168 |
+
+      at Object.toBe (tests/quiz-phase1.test.js:165:32)
+
+  ● Score Calculation - Phase 1 › should update score display in DOM
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "4"
+    Received: "0"
+
+      170 |     updateScoreDisplay(4);
+      171 |     const scoreElement = document.getElementById('score-value');
+    > 172 |     expect(scoreElement.textContent).toBe('4');
+          |                                      ^
+      173 |   });
+      174 | });
+
+      at Object.toBe (tests/quiz-phase1.test.js:172:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       17 failed, 1 passed, 18 total
+Snapshots:   0 total
+Time:        12.144 s
+Ran all test suites matching /tests\/quiz-phase1.test.js/i.

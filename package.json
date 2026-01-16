@@ -5,7 +5,11 @@
   "main": "js/quiz.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:phase1": "jest tests/quiz-phase1.test.js",
+    "test:phase2": "jest tests/quiz-phase2.test.js",
+    "test:phase3": "jest tests/quiz-phase3.test.js",
+    "test:all-phases": "npm run test:phase1 && npm run test:phase2 && npm run test:phase3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
