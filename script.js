@@ -35,3 +35,39 @@ function startQuiz() {
   }
 }
 
+
+/**
+ * Navigate to a specific question screen
+ * @param {number} questionNumber - The question number to navigate to (1-5)
+ */
+function goToQuestion(questionNumber) {
+  // Hide all question screens
+  const allQuestionScreens = document.querySelectorAll('.question-screen');
+  allQuestionScreens.forEach(screen => {
+    screen.classList.add('hidden');
+  });
+  
+  // Show the requested question screen
+  const targetScreen = document.getElementById(`question${questionNumber}-screen`);
+  if (targetScreen) {
+    targetScreen.classList.remove('hidden');
+  }
+}
+
+
+/**
+ * Navigate to the results screen
+ */
+function goToResults() {
+  // Hide all question screens
+  const allQuestionScreens = document.querySelectorAll('.question-screen');
+  allQuestionScreens.forEach(screen => {
+    screen.classList.add('hidden');
+  });
+  
+  // Show results screen
+  const resultsScreen = document.getElementById('results-screen');
+  if (resultsScreen) {
+    resultsScreen.classList.remove('hidden');
+  }
+}
