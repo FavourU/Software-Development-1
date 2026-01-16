@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { describe, expect, test, beforeEach, jest } = require('@jest/globals');
+const { describe, expect, test, beforeEach } = require('@jest/globals');
 
 // Mock DOM setup
 beforeEach(() => {
@@ -53,16 +53,20 @@ describe('Timer Function', () => {
     }, 1500);
   });
 
-  test('should stop timer when stop() is called', () => {
+  test('should stop timer when stop() is called', (done) => {
     const QuizTimer = require('../js/quiz.js').QuizTimer;
     const timer = new QuizTimer(25);
     timer.start();
-    timer.stop();
     
-    const timeBefore = timer.getTimeRemaining();
     setTimeout(() => {
-      expect(timer.getTimeRemaining()).toBe(timeBefore);
-    }, 1100);
+      const timeBefore = timer.getTimeRemaining();
+      timer.stop();
+      
+      setTimeout(() => {
+        expect(timer.getTimeRemaining()).toBe(timeBefore);
+        done();
+      }, 1100);
+    }, 500);
   });
 
   test('should reset timer to initial value', () => {
