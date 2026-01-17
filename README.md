@@ -53,9 +53,10 @@ This approach transforms a seasonal team-building activity into a reusable techn
 - **Open source**: Code can be adapted for other topics
 
 ### Design and Prototype
-[![Figma Design]([https://via.placeholder.com/800x450.png?text=Click+to+View+Figma+Design)](https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1](https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1))
 
-*Click the image above to view the interactive Figma design*
+[![Quiz](Figma design - main screens.png)]([https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1](https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1))
+
+*Click images to view interactive Figma prototype*
 
 ### Technical Approach
 Built with HTML, CSS, and JavaScript to demonstrate:
