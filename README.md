@@ -18,10 +18,10 @@
 ## 1. Product Proposal
 
 ### What is This?
-This project is a basic web-based trivia quiz focused on Valentine's Day themed questions. It is designed as a simple, engaging web application built with HTML, CSS, and JavaScript that can be played directly in the browser.
+This product is a basic web-based trivia quiz focused on Valentine's Day themed questions. It is designed as a simple, engaging web application built with HTML, CSS, and JavaScript that can be played directly in the browser.
 The quiz can be accessed throught the following link: https://favouru.github.io/Software-Development-1/ 
 
-### Why This Project?
+### Why This Product?
 My team holds quarterly meetings featuring ice breaker activities themed around current trends and seasons to foster team cohesion and engagement. Creating a Valentine's Day themed quiz website directly supports this initiative by providing an interactive, engaging activity that:
 
 - **Enhances Team Engagement**: The interactive nature and competitive element (score comparison) encourages participation and creates memorable shared experiences that strengthen team bonds
@@ -30,7 +30,7 @@ My team holds quarterly meetings featuring ice breaker activities themed around 
 
 **Addressing a Broader Need**
 
-Beyond this specific use case, the project addresses a gap in my team's digital toolkit for clean, fast, accessible quiz applications that:
+Beyond this specific use case, the product addresses a gap in my team's digital toolkit for clean, fast, accessible quiz applications that:
 - Work instantly without registration barriers (reducing friction for spontaneous team activities)
 - Provide engaging time-based challenges that maintain interest
 - Can be easily adapted for future team meetings with different themes
@@ -54,13 +54,13 @@ This approach transforms a seasonal team-building activity into a reusable techn
 
 ### Design and Prototype
 
-[![Quiz](Figma design - main screens.png)]([https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1](https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1))
-
 <a href="https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1">
   <img src="Figma design - main screens.png" alt="Quiz Design">
 </a>
 
 *Click images to view interactive Figma prototype*
+
+The Valentine's Day trivia quiz was designed in Figma to establish a clear user flow and visual identity before development. The design consists of 6 key screens that guide users through the complete quiz experience. The Welcome Screen features a centered card layout with a prominent "Start" button that initiates the quiz. The Question Screen displays a question counter (e.g., 4/5), a countdown timer (starting at 25 seconds), and multiple-choice answer buttons in a clean, accessible layout. The design incorporates immediate visual feedback through color-coded responses: green highlighting indicates correct answers, while red highlighting signals incorrect selections. A "Next Question" button appears only after the user selects an answer, ensuring controlled progression through the quiz. If the timer reaches zero before the user selects an answer, a Time's Up popup appears with a darkened background overlay, prompting the user to press "Okay" to proceed to the next question. Finally, the Results Screen presents the user's final score and includes a "Play Again" button to enable quiz replay without page refresh. The consistent marroon and pink color scheme and rounded card elements create a cohesive, engaging interface that aligns with the Valentine's Day theme while maintaining professional usability standards.
 
 ### Technical Approach
 Built with HTML, CSS, and JavaScript to demonstrate:
