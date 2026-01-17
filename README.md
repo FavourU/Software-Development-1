@@ -56,6 +56,10 @@ This approach transforms a seasonal team-building activity into a reusable techn
 
 [![Quiz](Figma design - main screens.png)]([https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1](https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1))
 
+<a href="https://www.figma.com/design/vwSrvVS0FF9nUZgRnoFkpb/Iknow-quiz?node-id=0-1&t=maEalIOCakgJrywI-1">
+  <img src="Figma design - main screens.png" alt="Quiz Design">
+</a>
+
 *Click images to view interactive Figma prototype*
 
 ### Technical Approach
