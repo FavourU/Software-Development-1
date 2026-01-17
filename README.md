@@ -4,8 +4,6 @@
 
 # I Know, You Know, We Know - Trivia Quiz
 
-[Brief description]
-
 ## Table of Contents
 1. Product Proposal
 2. Design & Prototype
@@ -20,28 +18,42 @@
 ## 1. Product Proposal
 
 ### What is This?
-This project is a web-based trivia quiz focused on Valentine's Day themed questions. It is designed as a simple, engaging web application built with HTML, CSS, and JavaScript that can be played directly in the browser.
+This project is a basic web-based trivia quiz focused on Valentine's Day themed questions. It is designed as a simple, engaging web application built with HTML, CSS, and JavaScript that can be played directly in the browser.
+The quiz can be accessed throught the following link: https://favouru.github.io/Software-Development-1/ 
 
 ### Why This Project?
-This project addresses the need for clean, fast, accessible quiz applications that:
-- Works instantly without registration
-- Provides engaging time-based challenges
-- Offers immediate feedback
+My team holds quarterly meetings featuring ice breaker activities themed around current trends and seasons to foster team cohesion and engagement. Creating a Valentine's Day themed quiz website directly supports this initiative by providing an interactive, engaging activity that:
+
+- **Enhances Team Engagement**: The interactive nature and competitive element (score comparison) encourages participation and creates memorable shared experiences that strengthen team bonds
+- **Improves Meeting Efficiency**: Unlike traditional ice breakers that can feel forced or time-consuming, this self-paced quiz allows team members to engage quickly and naturally
+- **Demonstrates Technical Value**: Showcases how lightweight web applications can solve real workplace needs without complex infrastructure
+
+**Addressing a Broader Need**
+
+Beyond this specific use case, the project addresses a gap in my team's digital toolkit for clean, fast, accessible quiz applications that:
+- Work instantly without registration barriers (reducing friction for spontaneous team activities)
+- Provide engaging time-based challenges that maintain interest
+- Can be easily adapted for future team meetings with different themes
+
+This approach transforms a seasonal team-building activity into a reusable technical solution that delivers both immediate value and demonstrates scalable web development practices.
 
 ### Target Audience
-- Valentine's Day enthusiasts seeking entertainment
-- Educators looking for interactive learning tools
-- Developers seeking a template for quiz applications
+- Primary Target Audience: Corporate Teams & Workplace Groups: Need quick, no-friction activities for quarterly meetings, team-building, and seasonal celebrations. Value efficiency and engagement to strengthen team cohesion
+
+- Social Groups & Event Organizers: Require simple web links that participants can access instantly. They may value structured activities that encourage interaction and friendly competition
+
+- Web Developers & Technical Professionals:
+-- Developers seeking lightweight quiz templates for customization
+-- Value straightforward HTML, CSS, and JavaScript implementation
 
 ### What Makes It Valuable?
 - **Zero friction**: No login, no installation
 - **Instant feedback**: Learn as you play
 - **Time challenge**: Creates engagement and replayability
-- **Fully accessible**: WCAG compliant design
 - **Open source**: Code can be adapted for other topics
 
 ### Technical Approach
-Built with vanilla HTML, CSS, and JavaScript to demonstrate:
+Built with HTML, CSS, and JavaScript to demonstrate:
 - Modern web development practices
 - Test-driven development (TDD)
 - Agile project management
@@ -74,7 +86,7 @@ Built with vanilla HTML, CSS, and JavaScript to demonstrate:
 - Quiz is fully functional from start to finish
 - All 5 questions are answerable with timer
 - Score is calculated correctly
-- Works on mobile and desktop
+- Works on desktop
 - Passes accessibility standards (WCAG AA)
 - Code coverage >70%
 
